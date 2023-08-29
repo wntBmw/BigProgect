@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400&display=swap');
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 1s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 1s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 1s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 1s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 1s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 1s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 1s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 1s ease;}
+
+body {
+  width: 100%;
+  min-height: 500px;
+
+  background-color: #1a1a1a;
+
+  margin: 0;
+  padding: 0;
+}
+
+.head-container {
+  position: relative;
+  display: flex;
+
+  width: 100%;
+  height: 88px;
+
+
+  background: #252525;
+}
+
+.name-logo {
+  position: absolute;
+  width: 50%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+.logo {
+  text-transform: uppercase;
+  position: absolute;
+  min-width: 0px;
+  height: 80px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+
+  border: none;
+}
+
+.search {
+  position: absolute;
+
+  width: 30%;
+  height: 47px;
+  padding-left:20px ;
+  
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+
+  border-radius: 14px;
+  border: none;
+  outline-width: 0;
+  background-color: #fff;
+
+  font-size: 20px;
+}
+
+.search::placeholder {
+  color: #62626280;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+.user-profile {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: #252525;
+}
+
+.main-container {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: #252525;
+}
+
+.poster {
+  margin-top: 50px;
+  width: 200px;
+  height: 70%;
+  border-radius: 8px;
+  border: #1a1a1a solid 10px;
+
+  position: relative;
+  cursor: pointer;
+  background: url(/pic/tittle.jpg);
+  background-size: cover;
+  background-position: 50%;
+  transition: 1s;
+  margin: 50px 20px 0 20px;
+}
+
+.poster::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.poster:hover::after {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+}
+
+.poster:hover {
+  transform: scale(1.01);
+  transition: 1s;
+}
+
+.description {
+  position: absolute;
+  width: 40%;
+  height: 300px;
+
+  color: #fff;
+  font-family: 'Mukta Malar', sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+
+  left: 300px;
+  top: 50px;
+}
+
+.player-container {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 100px;
+  left: 300px;
+  border-radius: 8px;
+  transition: 0.5s;
+  border: none;
+  padding: 0;
+  background: none;
+
+}
+
+.player-container:hover {
+  background-color: #3950EE;
+}
+
+.player-container:active {
+  background-color: #3951ee98;
+  transition: 0.1s;
+}
+
+.change-season {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 170px;
+  left: 300px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.change-season:hover {
+  width: 200px;
+  height: 50px;
+  background-color: #3950EE;
+  transition: 0.4s;
+}
+
+
+.other-pic-container {
+  width: calc(100% - 50px);
+  height: 45px;
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.other-pic {
+  max-width: 150px;
+  min-width: 140px;
+  min-height: 20px;
+
+  border: #404040 solid 2px;
+  opacity: 0.8;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+
+  text-align: center;
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 11px;
+  padding: 3px 3px 15px 3px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.other-pic:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  background: #3950EE;
+  color: #fff;
+}
+
+.other-pic:nth-child(n+2) {
+    margin-left:10px ;
+}
+
+/* popup */
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  z-index: 1000;
+}
+
+/* Добавление стилей в контейнер форм */
+.form-container {
+  min-width: 300px;
+  max-width: 301px;
+  padding: 5px 10px 0 10px;
+  background-color: white;
+  border-radius: 8px;
+  font-family: 'Mukta Malar', sans-serif;
+  border: rgb(0, 0, 0, 0.5) solid 1px;
+}
+
+.form-container label {
+  font-size: 14px;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=email], .form-container input[type=password] {
+  width: calc(100% - 10px);
+  border: none;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  font-size: 12px;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=email]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/кнопка */
+.form-container .btn {
+  background-color: #3950EE;
+  color: white;
+  padding: 16px 20px 16px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+/* Добавьте красный цвет фона к кнопке отмена */
+.form-container .cancel {
+  background-color: #3951eeb1;
+  margin-bottom:20px;
+}
+
+/* Добавьте некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 0.8;
+}
+
+.popup-video-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 1;
+  display: none;
+}
+
+.popup-video-content {
+  width: 700px;
+  height: 450px;
+  background-color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  opacity: 1;
+  border-radius: 8px;
+  display: none;
+}
